@@ -97,3 +97,31 @@ class Student(models.Model):
     >>> student_object.save()
 ````
 
+2. #### Select
+#### Select 'All objects' or records from a table
+
+````
+    >>> from dml_operations.models import Student 
+    >>> Student.objects.all()
+````
+
+#### Select 'Single objects' or records from a table)
+
+````
+    >>> from dml_operations.models import Student 
+    >>> Student.objects.get(id=2)
+    >>> Student.objects.get(first_name='Milu') 
+````
+
+#### Select 'Multiple objects' or records from a table)
+
+````
+    >>> from dml_operations.models import Student 
+    >>> Student.objects.filter(city='kkk') 
+````
+
+**NOTE**
+1. The all() return all the records from the specified table.
+2. The get() will be used only if there is one record with the specified condition. Otherwise, it returns error
+3. The filter() returns multiple records if the table have multi-records based on given condition.
+---
